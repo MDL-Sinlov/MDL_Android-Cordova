@@ -2,7 +2,10 @@
 
 # Android Cordova
 
+**Just In Develop Do not use**
+
 Android Cordova provides :
+- use cordova 6.1.0
 - ~~Full method count 00~~
 
 Less Runtime :
@@ -48,7 +51,43 @@ dependencies {
 
 # Usage
 
+add Module `src/main/res/xml/config.xml`
 
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<widget
+    id="your package name"
+    version="0.0.1">
+    <content src="index.html" />
+    <feature name="xxxxx">
+        <param
+            name="android-package"
+            value="your package name.xxxxx" />
+        <param
+            name="onload"
+            value="true" />
+    </feature>
+    <preference
+        name="loglevel"
+        value="DEBUG" />
+    <preference
+        name="useBrowserHistory"
+        value="true" />
+    <preference
+        name="exit-on-suspend"
+        value="false" />
+    <preference
+        name="showTitle"
+        value="true" />
+</widget>
+```
+
+must change
+
+- your package name
+- 0.0.1
+- xxxxx
+- your package name.xxxxx
 
 ###License
 

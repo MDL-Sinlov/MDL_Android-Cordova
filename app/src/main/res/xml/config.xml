@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget
+    id="mdl.sinlov.android.demo.cordova"
+    version="0.0.1">
+    <content src="index.html" />
+    <feature name="weibo">
+        <param
+            name="android-package"
+            value="mdl.sinlov.android.cordova.demo.plugin.WeiBoLoginPlugin" />
+        <param
+            name="onload"
+            value="true" />
+    </feature>
+    <preference
+        name="loglevel"
+        value="DEBUG" />
+    <preference
+        name="useBrowserHistory"
+        value="true" />
+    <preference
+        name="exit-on-suspend"
+        value="false" />
+    <preference
+        name="showTitle"
+        value="true" />
+    <access origin="*"/>
+    <access origin="tel:*" launch-external="yes" />
+    <access origin="http:*" launch-external="yes" />
+    <access origin="https:*" launch-external="yes" />
+    <allow-intent href="tel:*"/>
+</widget>

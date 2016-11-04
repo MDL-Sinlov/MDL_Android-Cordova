@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'android-apt'
 
+def is_index_weibo_host = true
+
 android {
     compileSdkVersion ANDROID_COMPILE_SDK_VERSION as int
     buildToolsVersion ANDROID_BUILD_TOOLS_VERSION
@@ -11,6 +13,17 @@ android {
         targetSdkVersion ANDORID_TARGET_SDK_VERSION as int
         versionCode VERSION_CODE as int
         versionName VERSION_NAME
+
+        if (project.hasProperty('str_index_weibo_login')) {
+            resValue "string", "str_index_weibo_login", str_index_weibo_login
+            is_index_weibo_host = false
+        } else {
+            resValue "string", "str_index_weibo_login", "https://passport.weibo.cn/signin/welcome?entry=mweibo"
+        }
+
+        if (is_index_weibo_host) {
+            logger.warn("WARNING [*] You are not set ws_server_host in gradle.properties default is https://passport.weibo.cn/signin/welcome?entry=mweibo")
+        }
     }
     buildTypes {
         release {
@@ -26,4 +39,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.jakewharton:butterknife:8.1.0'
     apt 'com.jakewharton:butterknife-compiler:8.1.0'
+    //    compile project(':CordovaFramework')
+    compile project(':cordovabridge')
 }
