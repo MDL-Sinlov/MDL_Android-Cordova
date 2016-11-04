@@ -11,6 +11,14 @@
             name="onload"
             value="true" />
     </feature>
+    <feature name="H5Game">
+        <param
+            name="android-package"
+            value="mdl.sinlov.android.cordova.demo.plugin.H5GameTestPlugin" />
+        <param
+            name="onload"
+            value="true" />
+    </feature>
     <preference
         name="loglevel"
         value="DEBUG" />

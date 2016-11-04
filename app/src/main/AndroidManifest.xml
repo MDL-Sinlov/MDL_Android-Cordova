@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name="mdl.sinlov.android.cordova.demo.plugin.WeiBoCordovaActivity" />
+        <activity android:name="mdl.sinlov.android.cordova.demo.plugin.H5GameTestActivity" />
     </application>
 
 </manifest>

@@ -19,6 +19,11 @@
             android:id="@+id/btn_main_skip_weibo"
             style="@style/Sinlov.Button.Menu.MW"
             android:text="Skip Weibo URL" />
+
+        <Button
+            android:id="@+id/btn_main_skip_h5_game"
+            style="@style/Sinlov.Button.Menu.MW"
+            android:text="Skip H5 Game" />
     </LinearLayout>
 
 </ScrollView>
