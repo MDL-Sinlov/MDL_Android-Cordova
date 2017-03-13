@@ -24,6 +24,11 @@
             android:id="@+id/btn_main_skip_h5_game"
             style="@style/Sinlov.Button.Menu.MW"
             android:text="Skip H5 Game" />
+
+        <Button
+            android:id="@+id/btn_main_skip_bbs"
+            style="@style/Sinlov.Button.Menu.MW"
+            android:text="Skip BBS" />
     </LinearLayout>
 
 </ScrollView>
